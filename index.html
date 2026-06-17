@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introdução API</title>
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversor de Moedas</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#060b22,#0b1445,#111b5f);
+padding:20px;
+color:#fff;
+}
+.card{
+width:100%;
+max-width:600px;
+background:rgba(15,20,70,.75);
+border:1px solid rgba(255,255,255,.15);
+border-radius:24px;
+padding:40px;
+backdrop-filter:blur(12px);
+box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+h1{
+text-align:center;
+margin-bottom:30px;
+font-size:2.5rem;
+color:#7f8cff;
+letter-spacing:4px;
+}
+label{display:block;margin-bottom:10px}
+input{
+width:100%;
+padding:15px;
+border-radius:12px;
+border:1px solid #4657ff;
+background:#050a36;
+color:white;
+margin-bottom:20px;
+}
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+background:linear-gradient(90deg,#4d5cff,#7280ff);
+color:white;
+font-size:1rem;
+cursor:pointer;
+margin-bottom:25px;
+}
+#resultado{
+padding:20px;
+border-radius:16px;
+background:rgba(255,255,255,.05);
+font-size:1.2rem;
+text-align:center;
+}
+</style>
 </head>
 <body>
-
-    <h1>Cotação do Dólar</h1>
-    <input type="number" name="dolarPReal" id="vdolar">
-    <label for="vdolar">Digite o valor em Dolar</label>
-    <button id="buscaCotacao">buscar cotação</button>
-
-    <p id="resultado"></p>
-
-    <script src="js/script.js"></script>
+<div class="card">
+<h1>CONVERT</h1>
+<label for="vdolar">Valor em Dólar (USD)</label>
+<input type="number" id="vdolar" placeholder="Digite o valor">
+<button id="buscaCotacao">Converter para Reais</button>
+<p id="resultado">Aguardando conversão...</p>
+</div>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-<!-- 
-1 - Cria input no html e adiciona id
-2 - Guarda na variavel, com document...
-3 - pegar o value do input/varial
-4 - converter a variavel de string para number
-5 - cria uma variavel para multiplicar o valor do dolar com o real
- -->
